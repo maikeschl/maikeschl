@@ -344,13 +344,72 @@
       margin-top: 4rem;
     }
 
+    /* ── Hamburger ── */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: .4rem;
+    }
+    .hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: white;
+      border-radius: 2px;
+      transition: transform .25s, opacity .25s;
+    }
+    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
     /* ── Responsive ── */
     @media (max-width: 680px) {
+      nav { padding: 0 1rem; }
+
+      .hamburger { display: flex; }
+
+      nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background: var(--teal-dark);
+        box-shadow: 0 4px 12px rgba(0,0,0,.3);
+        z-index: 99;
+      }
+      nav ul.open { display: flex; }
+      nav ul li a {
+        padding: 1rem 1.5rem;
+        font-size: .95rem;
+        border-bottom: 1px solid rgba(255,255,255,.08);
+      }
+
+      .hero { height: 260px; }
+      .hero-content h1 { font-size: 2rem; }
+      .hero-content p { font-size: .9rem; }
+
+      .container { padding: 2rem 1.2rem; }
+
       .profile-grid { grid-template-columns: 1fr; }
-      .profile-photo, .profile-photo-placeholder { width: 100%; height: 220px; }
+      .profile-photo { width: 100%; height: auto; max-height: 280px; }
+      .profile-photo-placeholder { width: 100%; height: 180px; }
+
       .contact-grid { grid-template-columns: 1fr; }
-      .hero-content h1 { font-size: 2.2rem; }
-      nav ul li a { padding: .9rem .7rem; font-size: .8rem; }
+
+      .teaching-list li {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: .3rem;
+      }
+      .teaching-list .course-detail { align-self: flex-start; }
+
+      .section-heading { font-size: 1.3rem; }
     }
   </style>
 </head>
@@ -359,7 +418,10 @@
 <!-- Navigation -->
 <nav>
   <a class="site-name" href="#" onclick="showSection('home')">Maike Schlosser</a>
-  <ul>
+  <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+  <ul id="nav-menu">
     <li><a href="#" onclick="showSection('home')" id="nav-home" class="active">Home</a></li>
     <li><a href="#" onclick="showSection('research')" id="nav-research">Research</a></li>
     <li><a href="#" onclick="showSection('teaching')" id="nav-teaching">Teaching</a></li>
@@ -379,7 +441,9 @@
 <section id="home" class="page-section active">
   <div class="container">
     <div class="profile-grid">
-      <img src="photo.jpg" class="profile-photo" alt="Maike Schlosser"> 
+      <div class="profile-photo-placeholder">
+        Add photo<br/>here
+      </div>
       <div class="profile-text">
         <h2>Welcome</h2>
         <p>
@@ -417,13 +481,6 @@
         <div class="contact-item">
           <div class="label">Address</div>
           <div class="value">Universitätsstraße 10<br/>78464 Konstanz, Germany</div>
-        </div>
-        <div class="contact-item">
-          <div class="label">Links</div>
-          <div class="value">
-            <a href="#">Google Scholar</a> &nbsp;·&nbsp;
-            <a href="#">CV (PDF)</a>
-          </div>
         </div>
       </div>
     </div>
@@ -557,7 +614,18 @@
     document.getElementById(name).classList.add('active');
     document.getElementById('nav-' + name).classList.add('active');
     window.scrollTo({ top: 0, behavior: 'smooth' });
+    closeMenu();
     return false;
+  }
+
+  function toggleMenu() {
+    document.getElementById('nav-menu').classList.toggle('open');
+    document.getElementById('hamburger').classList.toggle('open');
+  }
+
+  function closeMenu() {
+    document.getElementById('nav-menu').classList.remove('open');
+    document.getElementById('hamburger').classList.remove('open');
   }
 </script>
 
