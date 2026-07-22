@@ -427,6 +427,13 @@
     }
 
     /* ── Responsive ── */
+    @media (max-width: 860px) {
+      nav ul li a {
+        padding: .9rem .8rem;
+        font-size: .82rem;
+      }
+    }
+
     @media (max-width: 680px) {
       nav {
         padding: 0 1rem;
@@ -523,6 +530,7 @@
       <li><a href="#" onclick="showSection('research')" id="nav-research">Research</a></li>
       <li><a href="#" onclick="showSection('teaching')" id="nav-teaching">Teaching</a></li>
       <li><a href="#" onclick="showSection('presentations')" id="nav-presentations">Presentations</a></li>
+      <li><a href="cv.pdf" target="_blank" rel="noopener" onclick="closeMenu()">CV</a></li>
     </ul>
   </nav>
 
@@ -534,32 +542,33 @@
     </div>
   </div>
 
-<!-- ══════════════════════════════ HOME ══════════════════════════════ -->
-<section id="home" class="page-section active">
-  <div class="container">
-    <div class="profile-grid">
-      <img src="photo.jpg" class="profile-photo" alt="Maike Schlosser">
-      <div class="profile-text">
-        <h2>Welcome</h2>
-        <p>
-          I am a Ph.D. candidate in Economics at the University of Konstanz, Germany,
-          supervised by <strong>Prof. <a class="person-link" href="https://www.christinafelfe.com/" target="_blank" rel="noopener">Christina Felfe</a></strong> (Chair of Applied Microeconomics).
-        </p>
-<p>
-  My research focuses on <strong>behavioral microeconomics</strong>, particularly
-  <strong>education, discrimination, and law and economics</strong>. 
-  In my dissertation, I examine how social cohesion forms and the threats it faces — from early
-  childhood through university.
-</p>
-        <p>
-          I received the 2025 <strong>University of Konstanz Award for Teaching
-            Excellence (LUKS)</strong>, Department of Economics.
-        </p>
-        <p>
-          I will visit Cornell University with Seth Sanders in August/September 2026.
-        </p>
+  <!-- ══════════════════════════════ HOME ══════════════════════════════ -->
+  <section id="home" class="page-section active">
+    <div class="container">
+      <div class="profile-grid">
+        <img src="photo.jpg" class="profile-photo" alt="Maike Schlosser">
+        <div class="profile-text">
+          <h2>Welcome</h2>
+          <p>
+            I am a Ph.D. candidate in Economics at the University of Konstanz, Germany,
+            supervised by <strong>Prof. <a class="person-link" href="https://www.christinafelfe.com/" target="_blank"
+                rel="noopener">Christina Felfe</a></strong> (Chair of Applied Microeconomics).
+          </p>
+          <p>
+            My research focuses on <strong>behavioral microeconomics</strong>, particularly
+            <strong>education, discrimination, and law and economics</strong>.
+            In my dissertation, I examine how social cohesion forms and the threats it faces — from early
+            childhood through university.
+          </p>
+          <p>
+            I received the 2025 <strong>University of Konstanz Award for Teaching
+              Excellence (LUKS)</strong>, Department of Economics.
+          </p>
+          <p>
+            I will visit Cornell University with Seth Sanders in August/September 2026.
+          </p>
+        </div>
       </div>
-    </div>
 
       <div style="margin-top:3rem;">
         <h2 class="section-heading">Contact</h2>
@@ -594,26 +603,57 @@
         <div class="card">
           <div class="meta">Job Market Paper</div>
           <h3>From the Courtroom to the Classroom: Evidence of Biased
-Legal Decision-Making in Law School</h3>
-          <p>with <a class="person-link" href="https://lennartgdm.github.io/index.html" target="_blank" rel="noopener">Lennart Goldemann</a> (joint Ph.D. project)</p>
-          <p style="margin-top:.8rem;">Extensive research documents ethnicity- and gender-based disparities in judicial decision-making, a puzzling finding given legal professionals' rigorous training in evidence-based reasoning. Whether these disparities originate in professional practice or already exist during legal training remains unknown. We address this via a survey experiment with about 3,000 law students across 19 German universities. We randomly assign students to treatment or control versions of five criminal-law cases in which only the main subject's name is varied to signal ethnicity or gender. We find that subjects with ethnic-minority names receive significantly harsher, faster, and more confident evaluations than those with German-sounding names, while female subjects are evaluated more leniently than men; both patterns carry through to sentencing recommendations. Effect sizes vary by offense type, and students exhibit in-group biases. Critically, bias magnitude does not decline with training, indicating current legal education does not correct these disparities and curriculum reform may be needed.</p>
+            Legal Decision-Making in Law School</h3>
+          <p>with <a class="person-link" href="https://lennartgdm.github.io/index.html" target="_blank"
+              rel="noopener">Lennart Goldemann</a> (joint Ph.D. project)</p>
+          <p style="margin-top:.8rem;">Extensive research documents ethnicity- and gender-based disparities in judicial
+            decision-making, a puzzling finding given legal professionals' rigorous training in evidence-based
+            reasoning. Whether these disparities originate in professional practice or already exist during legal
+            training remains unknown. We address this via a survey experiment with about 3,000 law students across 19
+            German universities. We randomly assign students to treatment or control versions of five criminal-law
+            cases in which only the main subject's name is varied to signal ethnicity or gender. We find that subjects
+            with ethnic-minority names receive significantly harsher, faster, and more confident evaluations than those
+            with German-sounding names, while female subjects are evaluated more leniently than men; both patterns carry
+            through to sentencing recommendations. Effect sizes vary by offense type, and students exhibit in-group
+            biases. Critically, bias magnitude does not decline with training, indicating current legal education does
+            not correct these disparities and curriculum reform may be needed.</p>
           <a href="https://www.socialscienceregistry.org/trials/15465" target="_blank" rel="noopener">RCT Registry →</a>
         </div>
         <div class="card">
           <div class="meta">In Progress</div>
           <h3>A Journey to Unity — A Teacher-led Preschool Program to Foster Social Cohesion</h3>
-          <p>with <a class="person-link" href="https://sites.google.com/view/piaschilling/home" target="_blank" rel="noopener">Pia Schilling</a>, Theresia Hummel, <a class="person-link" href="https://www.wiwi.uni-konstanz.de/felfe/members/patrick-schneider/" target="_blank" rel="noopener">Patrick Schneider</a>, <a class="person-link" href="https://sites.google.com/site/judithsaurerecon/" target="_blank" rel="noopener">Judith Saurer</a>, <a class="person-link" href="https://www.christinafelfe.com/" target="_blank" rel="noopener">Christina Felfe</a></p>
+          <p>with <a class="person-link" href="https://sites.google.com/view/piaschilling/home" target="_blank"
+              rel="noopener">Pia Schilling</a>, Theresia Hummel, <a class="person-link"
+              href="https://www.wiwi.uni-konstanz.de/felfe/members/patrick-schneider/" target="_blank"
+              rel="noopener">Patrick Schneider</a>, <a class="person-link"
+              href="https://sites.google.com/site/judithsaurerecon/" target="_blank" rel="noopener">Judith Saurer</a>,
+            <a class="person-link" href="https://www.christinafelfe.com/" target="_blank" rel="noopener">Christina
+              Felfe</a></p>
           <a href="https://www.socialscienceregistry.org/trials/15039" target="_blank" rel="noopener">RCT Registry →</a>
         </div>
         <div class="card">
           <div class="meta">In Progress</div>
-          <h3>Childsteps towards Universalism - Roadblocks along the Way </h3>
-          <p>with <a class="person-link" href="https://www.christinafelfe.com/" target="_blank" rel="noopener">Christina Felfe</a>, Jeanine Grütter, <a class="person-link" href="https://sites.google.com/site/judithsaurerecon/" target="_blank" rel="noopener">Judith Saurer</a>, <a class="person-link" href="https://sites.google.com/view/piaschilling/home" target="_blank" rel="noopener">Pia Schilling</a>, <a class="person-link" href="https://www.wiwi.uni-konstanz.de/felfe/members/patrick-schneider/" target="_blank" rel="noopener">Patrick Schneider</a>, <a class="person-link" href="https://www.wiwi.uni-konstanz.de/felfe/members/milan-spendel/" target="_blank" rel="noopener">Milan Spendel</a></p>
+          <h3>Childsteps towards Universalism — Roadblocks along the Way</h3>
+          <p>with <a class="person-link" href="https://www.christinafelfe.com/" target="_blank" rel="noopener">Christina
+              Felfe</a>, Jeanine Grütter, <a class="person-link" href="https://sites.google.com/site/judithsaurerecon/"
+              target="_blank" rel="noopener">Judith Saurer</a>, <a class="person-link"
+              href="https://sites.google.com/view/piaschilling/home" target="_blank" rel="noopener">Pia Schilling</a>,
+            <a class="person-link" href="https://www.wiwi.uni-konstanz.de/felfe/members/patrick-schneider/"
+              target="_blank" rel="noopener">Patrick Schneider</a>, <a class="person-link"
+              href="https://www.wiwi.uni-konstanz.de/felfe/members/milan-spendel/" target="_blank"
+              rel="noopener">Milan Spendel</a></p>
         </div>
         <div class="card">
           <div class="meta">In Progress</div>
-          <h3>Immigrant Peer Exposure and Native Children's Social Preferences in Early Life: Evidence from German Preschools</h3>
-          <p>with <a class="person-link" href="https://sites.google.com/view/piaschilling/home" target="_blank" rel="noopener">Pia Schilling</a>, <a class="person-link" href="https://www.christinafelfe.com/" target="_blank" rel="noopener">Christina Felfe</a>, <a class="person-link" href="https://www.wiwi.uni-konstanz.de/felfe/members/patrick-schneider/" target="_blank" rel="noopener">Patrick Schneider</a>, <a class="person-link" href="https://sites.google.com/site/judithsaurerecon/" target="_blank" rel="noopener">Judith Saurer</a></p>
+          <h3>Immigrant Peer Exposure and Native Children's Social Preferences in Early Life: Evidence from German
+            Preschools</h3>
+          <p>with <a class="person-link" href="https://sites.google.com/view/piaschilling/home" target="_blank"
+              rel="noopener">Pia Schilling</a>, <a class="person-link" href="https://www.christinafelfe.com/"
+              target="_blank" rel="noopener">Christina Felfe</a>, <a class="person-link"
+              href="https://www.wiwi.uni-konstanz.de/felfe/members/patrick-schneider/" target="_blank"
+              rel="noopener">Patrick Schneider</a>, <a class="person-link"
+              href="https://sites.google.com/site/judithsaurerecon/" target="_blank" rel="noopener">Judith Saurer</a>
+          </p>
         </div>
       </div>
     </div>
@@ -671,15 +711,14 @@ Legal Decision-Making in Law School</h3>
 
       <p class="pres-year">2026</p>
       <ul class="pres-list">
-          <li>Jahrestagung 2026 (Behavioral Economics) Verein für Socialpolitik (Innsbruck, Austria)</li>
-         <li>Annual Conference of the European Society for Population Economics (ESPE) (Espoo, Finland)</li>
+        <li>Jahrestagung 2026 (Behavioral Economics) Verein für Socialpolitik (Innsbruck, Austria)</li>
+        <li>Annual Conference of the European Society for Population Economics (ESPE) (Espoo, Finland)</li>
         <li>Cluster of Excellence ECONtribute LawEcon Seminar, University of Bonn (invited, Germany)</li>
-           <li>14th Thurgau Experimental Economics Meeting on Polarized Worlds (Switzerland)</li>
-           <li>Swiss Education Network Workshop, University of Zurich (Switzerland)</li>
-           <li>Microeconomics Day at Thurgau Wirtschaftsinstitut, University of Konstanz (Germany)</li>
-         <li>Alpine Population Conference (Italy)</li>
-        <li>Ski and Labor Conference (invited, Switzerland)</li
-       
+        <li>14th Thurgau Experimental Economics Meeting on Polarized Worlds (Switzerland)</li>
+        <li>Swiss Education Network Workshop, University of Zurich (Switzerland)</li>
+        <li>Microeconomics Day at Thurgau Wirtschaftsinstitut, University of Konstanz (Germany)</li>
+        <li>Alpine Population Conference (Italy)</li>
+        <li>Ski and Labor Conference (invited, Switzerland)</li>
       </ul>
 
       <p class="pres-year">2025</p>
